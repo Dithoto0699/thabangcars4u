@@ -11,7 +11,7 @@
     --primary: #1a56db;
     --primary-dark: #1240a8;
     --secondary: #0f172a;
-    --accent: #f59e0b;
+    --accent: #f59e0b; 
     --whatsapp: #25d366;
     --whatsapp-dark: #1da851;
     --text: #334155;
@@ -344,11 +344,24 @@ ul, ol {
 }
 
 .vehicle-img {
-    height: 180px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
+    background-color: #1e293b;
+}
+
+.vehicle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.vehicle-card:hover .vehicle-img img {
+    transform: scale(1.05);
 }
 
 .vehicle-placeholder {
